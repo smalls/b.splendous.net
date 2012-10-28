@@ -1,7 +1,8 @@
 (ns net.splendous.routes
     (:use compojure.core)
     (:require [compojure.route :as route]
-              [compojure.handler :as handler]))
+              [compojure.handler :as handler]
+              [ring.adapter.jetty :as ring]))
 
 (defroutes main-routes
            (route/resources "/" {:root "static"})
@@ -17,3 +18,10 @@
 (def app
     (-> (handler/site main-routes)
         (wrap-dir-index)))
+
+(defn start [port]
+    (ring/run-jetty #'app {:port (or port 8080)
+                           :join? false}))
+
+(defn -main []
+    (start (Integer. (System/getenv "PORT"))))
