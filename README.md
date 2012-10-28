@@ -15,7 +15,7 @@ And to install a new version:
 	-Dfile=/Users/small/Desktop/clojure/smallblog-static/target/smallblog-static-1.0.0-SNAPSHOT.jar
 	-DartifactId=smallblog-static -Dversion=1.0.0-SNAPSHOT
 	-DgroupId=smallblog-static -Dpackaging=jar
-	-DlocalRepositoryPath=maven-repository
+	-DlocalRepositoryPath=maven-repository -DcreateChecksum=true
 
 ## License
 
