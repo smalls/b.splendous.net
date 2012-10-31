@@ -1,2 +1,2 @@
 #!/bin/sh
-lein genblog
+lein postc

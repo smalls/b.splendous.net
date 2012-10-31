@@ -2,6 +2,7 @@
 /lib
 /classes
 /checkouts
+/.lein-classpath
 pom.xml
 *.jar
 *.class
